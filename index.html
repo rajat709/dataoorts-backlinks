@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhance Your Online Presence with High-Quality Backlinks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles */
+    :root {
+      --primary: #6EE7B7;
+      --secondary: #3B82F6;
+      --glass: rgba(255, 255, 255, 0.05);
+      --background: #0f172a;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--background);
+      color: #f8fafc;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+      padding: 0.5rem 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(110, 231, 183, 0.15));
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0 0 2rem 2rem;
+      color: #fff;
+      padding: 4rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin: 0 2rem;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      z-index: -1;
+      animation: glowing 20s linear infinite;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Main Section */
+    section {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 4rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #94a3b8;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Pricing Cards Container */
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .pricing-card {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      flex: 1 1 300px;
+      max-width: 400px;
+      position: relative;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+      );
+      transition: 0.5s;
+    }
+
+    .pricing-card:hover::before {
+      left: 100%;
+    }
+
+    .pricing-card h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pricing-card ul li {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pricing-card ul li strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Guidelines Section */
+    .guidelines {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1.5rem;
+      padding: 3rem;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .guidelines h2 {
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .guidelines ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .guidelines ul li {
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.75rem;
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .guidelines ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 1rem;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    /* Contact/Call-To-Action */
+    .cta {
+      text-align: center;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1.5rem;
+      padding: 3rem 2rem;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, var(--primary), transparent);
+      animation: animate 6s linear infinite;
+    }
+
+    .cta > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta p {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-details {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .contact-details span {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .cta a {
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      color: #0f172a;
+      padding: 1rem 2.5rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s ease;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(110, 231, 183, 0.3);
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Animations */
+    @keyframes glowing {
+      0% { opacity: 0.2; }
+      50% { opacity: 0.5; }
+      100% { opacity: 0.2; }
+    }
+
+    @keyframes animate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        margin: 0 1rem;
+        padding: 2rem 1rem;
+      }
+      
+      header h1 {
+        font-size: 2.4rem;
+      }
+      
+      .pricing-card {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Enhance Your Online Presence</h1>
+    <p>Boost your site's authority with premium, permanent backlinks</p>
+  </header>
+
+  <section>
+    <div class="intro">
+      <p>
+        At Dataoorts-Digital, we empower your digital growth with high-quality backlinks that not only elevate your search rankings but also provide long-term value. Choose from our tailored services featuring both dofollow and nofollow links.
+      </p>
+    </div>
+
+    <div class="pricing-container">
+      <!-- Our Entity Pricing Card -->
+      <div class="pricing-card">
+        <h3>Our Entity (dataoorts.com)</h3>
+        <ul>
+          <li><strong>Dofollow:</strong> $549 per link</li>
+          <li><strong>Nofollow:</strong> $499 per link</li>
+        </ul>
+      </div>
+
+      <!-- External Platforms Pricing Card -->
+      <div class="pricing-card">
+        <h3>External Platforms</h3>
+        <ul>
+          <li>LinkedIn, Medium, Dev Post, etc.</li>
+          <li><strong>Dofollow/Nofollow:</strong> $499 per link</li>
+        </ul>
+      </div>
+
+      <!-- All-in-One Package Pricing Card -->
+      <div class="pricing-card">
+        <h3>All-in-One Package</h3>
+        <ul>
+          <li>50 Backlinks (Dofollow/Nofollow)</li>
+          <li>Includes both our Entity and External Platforms</li>
+          <li>Backlinks on Trending Articles/Pages/Posts</li>
+          <li>Content Research (or use your provided)</li>
+          <li><strong>Package:</strong> $10,000</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="guidelines">
+      <h2>Our Process & Guidelines</h2>
+      <ul>
+        <li>Your content should be genuine and easy to understand</li>
+        <li>Align your style with your existing content for seamless presentation</li>
+        <li>Maintain consistency with comparable published material</li>
+      </ul>
+    </div>
+
+    <div class="cta">
+      <p>Ready to boost your online visibility and credibility?</p>
+      <div class="contact-details">
+        <p>Email: <span style="color: white;">help@dataoorts.com</span></p>
+        <p>Phone: <span style="color: white;">+91 79850-00709</span></p>
+      </div>
+      <a href="mailto:help@dataoorts.com">Contact Us Today</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dataoorts-Digital. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
